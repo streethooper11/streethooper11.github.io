@@ -4380,7 +4380,7 @@
   const CLASS_NAME_SHOW$5 = 'show';
   const EVENT_MOUSEDOWN = `mousedown.bs.${NAME$9}`;
   const Default$8 = {
-    className: 'modal-backdrop',
+    className: 'portfol-backdrop',
     clickCallback: null,
     isAnimated: false,
     isVisible: true,
@@ -4622,7 +4622,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.3): modal.js
+   * Bootstrap (v5.2.3): linker.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4631,7 +4631,7 @@
    */
 
   const NAME$7 = 'modal';
-  const DATA_KEY$4 = 'bs.modal';
+  const DATA_KEY$4 = 'bs.portfol';
   const EVENT_KEY$4 = `.${DATA_KEY$4}`;
   const DATA_API_KEY$2 = '.data-api';
   const ESCAPE_KEY$1 = 'Escape';
@@ -4645,14 +4645,14 @@
   const EVENT_MOUSEDOWN_DISMISS = `mousedown.dismiss${EVENT_KEY$4}`;
   const EVENT_KEYDOWN_DISMISS$1 = `keydown.dismiss${EVENT_KEY$4}`;
   const EVENT_CLICK_DATA_API$2 = `click${EVENT_KEY$4}${DATA_API_KEY$2}`;
-  const CLASS_NAME_OPEN = 'modal-open';
+  const CLASS_NAME_OPEN = 'portfol-open';
   const CLASS_NAME_FADE$3 = 'fade';
   const CLASS_NAME_SHOW$4 = 'show';
-  const CLASS_NAME_STATIC = 'modal-static';
-  const OPEN_SELECTOR$1 = '.modal.show';
-  const SELECTOR_DIALOG = '.modal-dialog';
-  const SELECTOR_MODAL_BODY = '.modal-body';
-  const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="modal"]';
+  const CLASS_NAME_STATIC = 'portfol-static';
+  const OPEN_SELECTOR$1 = '.portfol.show';
+  const SELECTOR_DIALOG = '.portfol-dialog';
+  const SELECTOR_MODAL_BODY = '.portfol-body';
+  const SELECTOR_DATA_TOGGLE$2 = '[data-bs-toggle="portfol"]';
   const Default$6 = {
     backdrop: true,
     focus: true,
@@ -4776,7 +4776,7 @@
     }
 
     _showElement(relatedTarget) {
-      // try to append dynamic modal
+      // try to append dynamic portfol
       if (!document.body.contains(this._element)) {
         document.body.append(this._element);
       }
@@ -4785,7 +4785,7 @@
 
       this._element.removeAttribute('aria-hidden');
 
-      this._element.setAttribute('aria-modal', true);
+      this._element.setAttribute('aria-portfol', true);
 
       this._element.setAttribute('role', 'dialog');
 
@@ -4858,7 +4858,7 @@
 
       this._element.setAttribute('aria-hidden', true);
 
-      this._element.removeAttribute('aria-modal');
+      this._element.removeAttribute('aria-portfol');
 
       this._element.removeAttribute('role');
 
@@ -4969,7 +4969,7 @@
 
     EventHandler.one(target, EVENT_SHOW$4, showEvent => {
       if (showEvent.defaultPrevented) {
-        // only register focus restorer if modal will actually get shown
+        // only register focus restorer if portfol will actually get shown
         return;
       }
 
@@ -4978,7 +4978,7 @@
           this.focus();
         }
       });
-    }); // avoid conflict when clicking modal toggler while another one is open
+    }); // avoid conflict when clicking portfol toggler while another one is open
 
     const alreadyOpen = SelectorEngine.findOne(OPEN_SELECTOR$1);
 
@@ -5089,7 +5089,7 @@
         new ScrollBarHelper().hide();
       }
 
-      this._element.setAttribute('aria-modal', true);
+      this._element.setAttribute('aria-portfol', true);
 
       this._element.setAttribute('role', 'dialog');
 
@@ -5136,7 +5136,7 @@
       const completeCallback = () => {
         this._element.classList.remove(CLASS_NAME_SHOW$3, CLASS_NAME_HIDING);
 
-        this._element.removeAttribute('aria-modal');
+        this._element.removeAttribute('aria-portfol');
 
         this._element.removeAttribute('role');
 
@@ -5257,7 +5257,7 @@
     }
   });
   EventHandler.on(window, EVENT_RESIZE, () => {
-    for (const element of SelectorEngine.find('[aria-modal][class*=show][class*=offcanvas-]')) {
+    for (const element of SelectorEngine.find('[aria-portfol][class*=show][class*=offcanvas-]')) {
       if (getComputedStyle(element).position !== 'fixed') {
         Offcanvas.getOrCreateInstance(element).hide();
       }
@@ -5550,7 +5550,7 @@
   const CLASS_NAME_SHOW$2 = 'show';
   const SELECTOR_TOOLTIP_INNER = '.tooltip-inner';
   const SELECTOR_MODAL = `.${CLASS_NAME_MODAL}`;
-  const EVENT_MODAL_HIDE = 'hide.bs.modal';
+  const EVENT_MODAL_HIDE = 'hide.bs.portfol';
   const TRIGGER_HOVER = 'hover';
   const TRIGGER_FOCUS = 'focus';
   const TRIGGER_CLICK = 'click';
